@@ -21,3 +21,15 @@ export async function getProduct(slug: string) {
 
     return product;
 }
+
+export async function createProduct(data: any) {
+    await dbConnect();
+
+    const newProduct = new Product({
+        ...data,
+        createdAt: new Date(),
+    });
+    await newProduct.save();
+
+    return newProduct;
+}

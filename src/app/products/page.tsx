@@ -5,12 +5,18 @@ export default async function ProductsPage() {
   return (
     <main className="min-h-screen bg-gray-50 px-4 py-8 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-4xl">
-        <div className="mb-6">
+        <div className="mb-6 flex items-center justify-between">
           <Link
             href="/"
             className="flex items-center gap-1 text-sm font-medium text-blue-600 hover:text-blue-500"
           >
             Volver al inicio
+          </Link>
+          <Link
+            href="/products/create"
+            className="ml-4 inline-flex items-center gap-1 rounded-md bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-500"
+          >
+            Crear Producto
           </Link>
         </div>
         <div className="mb-8">
